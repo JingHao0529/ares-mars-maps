@@ -26,3 +26,5 @@
 .coverage-map-label span{left:auto;right:0}
 .layers-control:has(#layerPanel:not(.hidden)){z-index:950}
 
+.endpoint-row button.picking{color:#f0d3a8;background:#f0d3a81c;box-shadow:inset 0 0 0 1px #f0d3a865;border-radius:6px}
+

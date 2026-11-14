@@ -41,3 +41,5 @@ Surface photos use CTX imagery for both native tiles and repeated overview fallb
 
 Layers contains map styles plus steep-ground and historical-dust overlays. Warm Surface photos and environmental routing are always enabled. The measured terrain boundary stays visible and carries its own map label; the extra local ground-height overlay has been removed.
 
+After both endpoints are set, ordinary map and globe clicks leave them in place. The Destination pin button arms a one-click replacement, and Escape cancels it. Destination markers cannot be dragged. Outside measured terrain, the initial illustrative path is deterministic; historical dust data may choose a repeatable detour. No random waypoints are added.
+
