@@ -17,3 +17,5 @@ dialog{background:rgba(28,35,39,.94);border-radius:14px;box-shadow:0 15px 60px #
 
 #directions:has(#routeResult:not(.hidden))>.section-title,#directions:has(#routeResult:not(.hidden))>.transport-note,#directions:has(#routeResult:not(.hidden))>#routeMethod,#directions:has(#routeResult:not(.hidden))>#plan,#directions:has(#routeResult:not(.hidden))>.hint{display:none}
 
+[hidden]{display:none!important}#status:empty{display:none}.layer-choice{grid-template-columns:30px 1fr;align-items:center;padding:11px 10px}.layer-choice svg{grid-row:auto}.layer-choice b{align-self:center}#resultMethod{font-size:11px;padding-bottom:4px}#routeRecommendation{display:none}#directions>.transport-note{display:none}
+
