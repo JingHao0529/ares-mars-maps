@@ -27,3 +27,13 @@ See data/resources.json, data/hazards.json, data/sources.json, data/landings.jso
 
 GitHub Pages serves the root of main. All asset paths are relative, so the app works under a repository URL.
 
+## Trip planning
+
+The sidebar has one card for Start/Destination and a separate card for transport, results and trip planning. Add up to five searchable or map-selected stops, reorder them, set stop durations, or drag their numbered markers. Swapping endpoints reverses the stops; closing a journey clears them.
+
+Daylight is calculated from NASA Mars24 solar-position equations, converting planetocentric map latitude to planetographic latitude with JPL/NAIF Mars radii. It uses a flat geometric horizon with no refraction, terrain shadows or atmospheric opacity. Moving intervals are sampled at up to five Earth minutes. Optional night pauses wait for a modeled sunrise, searching up to three sols ahead at each waiting location; polar-night cases ask for a later date or night travel. Departure and arrival Earth dates use UTC. The total duration and radiation reference include stops and night waits.
+
+The range model is user-defined, not NASA vehicle capability data. Example full-charge ranges are 100 km (rover), 60 km (cargo), or a 20 km whole-trip walking budget. Vehicle charge use equals stage distance divided by full-charge range, times 100. Reserve warnings track each stage; recharging later cannot hide an unreachable earlier stage. Full recharges are explicit user assumptions and do not identify real infrastructure. Battery cold, hill loads, idle energy, ageing, and suit life support are not modeled.
+
+The flat map repeats horizontally. Leaflet world wrapping keeps longitudes manageable; solid latitude bounds keep the view on Mars, and the widest zoom locks vertical panning. Overview, terrain and route overlays repeat with the map. Place labels, landing sites and panorama pins appear only while no route endpoint is set. Their layer switches have been removed; each remaining layer has a plain-language description.
+

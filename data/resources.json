@@ -67,10 +67,10 @@
       "note": "This is the feed used for the dated weather report. It is for outreach, so we don’t treat it as weather for a real expedition."
     },
     {
-      "title": "Mars clock equations · NASA Mars24",
+      "title": "Mars time and daylight · NASA Mars24",
       "url": "https://www.giss.nasa.gov/tools/mars24/help/algorithm.html",
       "description": "This is the mean solar time at Mars's prime meridian.",
-      "note": "We use NASA’s equations, then shift the clock to the starting longitude. Without a start, it shows time at 0° east. It is a mean solar clock, not the number of sols since a mission landed."
+      "note": "We use NASA’s equations, then shift the clock to the starting longitude. Without a start, it shows time at 0° east. It is a mean solar clock, not the number of sols since a mission landed. We also use its solar-position equations for the departure, arrival and daylight plan. The estimate uses a flat horizon and ignores weather and terrain shadows."
     },
     {
       "title": "Earth time conversion · IERS",
@@ -89,6 +89,12 @@
       "url": "https://threejs.org/",
       "description": "JavaScript 3D Library",
       "note": "This free library draws the globe. The surface pictures still come from the NASA sources above."
+    },
+    {
+      "title": "Mars shape and coordinates · NASA / JPL NAIF",
+      "url": "https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/spicelib/recpgr.html",
+      "description": "",
+      "note": "We use Mars’s equatorial radius of 3,396.19 km and polar radius of 3,376.20 km to convert map latitude before calculating the Sun’s height. This follows the coordinate method in the NASA / JPL example."
     }
   ],
   "landings": [
