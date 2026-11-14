@@ -145,3 +145,6 @@ MarsStreetView.mount({map,displayPoint});
 
 $('#clearJourney').onclick=()=>{for(const id of ['startInput','endInput'])$('#'+id).value='';endpointNames.start=null;endpointNames.end=null;pickMode=null;map.getContainer().style.cursor='';clearRoute('');if(selectedMarker){map.removeLayer(selectedMarker);selectedMarker=null}setPanel(true);syncDestinationState();updateEndpoints();updateEndpointNames();$('#search').value='';hideSuggestions();globeController?.render()};
 
+
+// Open with the globe; setGlobe retains its flat-map fallback if WebGL is unavailable.
+setGlobe(true);
