@@ -148,3 +148,5 @@ $('#clearJourney').onclick=()=>{for(const id of ['startInput','endInput'])$('#'+
 
 // Open with the globe; setGlobe retains its flat-map fallback if WebGL is unavailable.
 setGlobe(true);
+
+$('#swapEndpoints').onclick=()=>{const start=$('#startInput').value;$('#startInput').value=$('#endInput').value;$('#endInput').value=start;const name=endpointNames.start;endpointNames.start=endpointNames.end;endpointNames.end=name;pickMode=null;map.getContainer().style.cursor='';clearRoute('');syncDestinationState();updateEndpoints();updateEndpointNames();updateRouteMethod();if(hasRouteEndpoints())$('#plan').onclick()};
