@@ -81,6 +81,18 @@
       "title": "Sol duration: NASA Mars24",
       "url": "https://www.giss.nasa.gov/tools/mars24/help/notes.html",
       "description": "Travel durations use 88775.244 Earth seconds per mean solar sol. Estimates exclude rest stops."
+    },
+    {
+      "title": "Perseverance Sol 3 panorama",
+      "url": "https://science.nasa.gov/resource/mastcam-zs-first-360-degree-panorama/",
+      "description": "NASA cylindrical 360-degree Mastcam-Z panorama at Jezero landing, February 21 2021. Viewer uses NASA-hosted preview imagery, without generated content.",
+      "credit": "NASA/JPL-Caltech/ASU/MSSS"
+    },
+    {
+      "title": "Curiosity first-drive panorama",
+      "url": "https://science.nasa.gov/resource/curiositys-first-track-marks-on-mars/",
+      "description": "NASA 360-degree Navcam cylindrical panorama, August 22 2012. Camera marker is approximate, within the Bradbury Landing area; rover was about six metres from its landing site.",
+      "credit": "NASA/JPL-Caltech"
     }
   ],
   "derived_products": {
