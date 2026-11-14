@@ -1,0 +1,107 @@
+{
+  "name": "ARES Maps source manifest",
+  "retrieved_local_date": "2026-11-14",
+  "data_kind": "archived planetary observations, not real-time conditions",
+  "coordinate_system": "IAU 2015:49900, Mars geographic, planetocentric latitude, east-positive longitude",
+  "distance_radius_m": 3396190,
+  "datasets": [
+    {
+      "title": "Jezero CTX stereo terrain model",
+      "description": "Measured elevation from NASA MRO CTX stereo images, processed by USGS with Ames Stereo Pipeline. A 512 × 512 crop is bundled; slopes are calculated by ARES.",
+      "url": "https://stac.astrogeology.usgs.gov/docs/data/mars/ctxdtms/",
+      "credit": "NASA/JPL-Caltech/MSSS; USGS Astrogeology; Ames Stereo Pipeline. Laura et al. (2023), doi:10.5066/P9JKVWR3.",
+      "asset": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/P18_007925_1987_XN_18N282W__P19_008650_1987_XI_18N282W/P18_007925_1987_XN_18N282W__P19_008650_1987_XI_18N282W_dtm.tif",
+      "sha256": "2acf3fb601fc9728c88cf9b768cc20c0f51dd6ef143936d429f7ca1623ca1ba0",
+      "resolution_projected_m": 20.162955124498982,
+      "image_ids": [
+        "P18_007925_1987_XN_18N282W",
+        "P19_008650_1987_XI_18N282W"
+      ],
+      "vertical_datum": "MOLA areoid"
+    },
+    {
+      "title": "Controlled Jezero CTX / HiRISE imagery",
+      "description": "NASA Mars Trek controlled orbital mosaics. CTX is shown at regional scale; HiRISE loads at close zoom. A 25-tile CTX mosaic is bundled for the starting area.",
+      "url": "https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars",
+      "credit": "NASA/JPL-Caltech/MSSS/University of Arizona/USGS; NASA Mars Trek.",
+      "layers": [
+        "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+        "JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd"
+      ],
+      "cached_tile_zoom": 12
+    },
+    {
+      "title": "Global CTX orbital mosaic",
+      "description": "Global context outside the Jezero controlled mosaic. This uncontrolled mosaic can have positional offsets.",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/CTX_beta01_uncontrolled_5m_Caltech/1.0.0/WMTSCapabilities.xml",
+      "credit": "NASA/JPL-Caltech/MSSS; Caltech; Esri hosting.",
+      "asset": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer"
+    },
+    {
+      "title": "Viking color and MOLA relief",
+      "description": "Global color imagery and color shaded relief, accessed through NASA Mars Trek. Zooming beyond source resolution enlarges pixels.",
+      "url": "https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars",
+      "credit": "NASA Viking; NASA Mars Global Surveyor / MOLA; USGS; NASA Mars Trek.",
+      "layers": [
+        "Mars_Viking_MDIM21_ClrMosaic_global_232m",
+        "Mars_MGS_MOLA_ClrShade_merge_global_463m"
+      ]
+    },
+    {
+      "title": "THEMIS day / night infrared mosaics",
+      "description": "Historical Mars Odyssey infrared mosaics, 100 m, v2 October 2018. Display imagery only: no present-day or numeric surface temperatures are inferred.",
+      "url": "https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars",
+      "credit": "NASA/JPL-Caltech/Arizona State University/USGS; NASA Mars Trek.",
+      "layers": [
+        "THEMIS_DayIR_ControlledMosaics_100m_v2_oct2018",
+        "THEMIS_NightIR_ControlledMosaics_100m_v2_oct2018"
+      ]
+    },
+    {
+      "title": "Perseverance landing coordinates",
+      "description": "Landing marker: 18.44463° N, 77.45088° E. This is the 2021 landing position, not the current rover location. Other search landmarks are approximate overview points.",
+      "url": "https://ntrs.nasa.gov/citations/20210024644",
+      "credit": "NASA Langley Research Center, Assessment of the Mars 2020 Entry, Descent, and Landing Simulation."
+    },
+    {
+      "title": "IAU / USGS Mars named places",
+      "url": "https://planetarynames.wr.usgs.gov/Page/MARS/target",
+      "description": "2055 named feature centers; labels declutter by view."
+    },
+    {
+      "title": "Historic Mars landing sites",
+      "description": "12 landing missions; individual references and approximate-location flags in landings.json. Historical landing sites, not live rover positions."
+    },
+    {
+      "title": "NASA Viking globe imagery",
+      "url": "https://trek.nasa.gov/",
+      "description": "2048 x 1024 Viking MDIM21 color mosaic from NASA Mars Trek tiles; spherical globe, not detailed terrain."
+    },
+    {
+      "title": "Sol duration: NASA Mars24",
+      "url": "https://www.giss.nasa.gov/tools/mars24/help/notes.html",
+      "description": "Travel durations use 88775.244 Earth seconds per mean solar sol. Estimates exclude rest stops."
+    }
+  ],
+  "derived_products": {
+    "slope": "central differences on the native projected grid, east-west spacing corrected by cos(latitude); unknown neighbors remain unknown",
+    "elevation_display": "rounded to 0.1 m for storage, displayed to nearest meter; source accuracy is lower than this numerical precision",
+    "routing": "A* on eight-connected terrain cells; per-edge cost is Mars horizontal distance plus user uphill weight times positive elevation gain. Excludes missing cells, over-limit terrain and edge slopes, and diagonal corner cutting. Straight-line Mars distance is an admissible heuristic. Endpoints snap to cell centers.",
+    "travel_time": "Automatically selected transport preset: distance / speed, plus per-meter ascent allowance only for measured terrain routes. Visual estimates have unknown climbing time.",
+    "cost_units": "Equivalent flat-travel meters; adjustable planning model, not measured metabolic energy. Downhill has distance cost but no uphill surcharge.",
+    "visual_routing": "Outside measured coverage (or when selected explicitly), sample a padded endpoint window on a 128 × 128 grid from global NASA MRO CTX imagery, hosted by Esri. Local grayscale differences within a 5 × 5 cell neighborhood create a 0–1 contrast/texture proxy. Edge cost = Mars distance × (1 + user weight × mean endpoint proxy). This is an appearance-based estimate, not topographic height or slope. Missing pixels are excluded; elevation/ascent/slope remain null. Tile zoom adapts to window size. A* searches only the sampled window, not the entire planet."
+  },
+  "not_ingested": [
+    "quantitative surface temperature",
+    "radiation map",
+    "chemistry / mineral raster",
+    "current weather",
+    "boulder or sand hazards",
+    "oxygen or life-support measurements"
+  ],
+  "challenge_url": "https://www.spaceappschallenge.org/2026/challenges/interplanetary-survival-guide-martian-map/",
+  "challenge_resource_access_note": "Challenge URL was inaccessible from this environment (certificate/HTTP errors). Original NASA Mars Trek and USGS data services were accessed directly.",
+  "source_dtm_projection": "IAU 2015:49910 equirectangular, planetocentric latitude, east-positive longitude",
+  "transport_preset_note": "Illustrative planning assumptions selected by transport mode, not NASA-certified capability or physiological models. On foot: 2.5 km/h, 15-degree slope cap, uphill weight 10, image texture weight 10, 0.05 min per ascent meter. Rover: 6 km/h, 12-degree slope cap, uphill weight 4, image texture weight 7, 0.01 min per ascent meter. Cargo rover: 4 km/h, 10-degree slope cap, uphill weight 18, image texture weight 18, 0.03 min per ascent meter. Visual mode does not assess slopes or ascent and uses distance-based time only.",
+  "display_notes": "Optional warm tint is a display filter, not measured color. Globe uses NASA color imagery. Three.js: MIT license."
+}

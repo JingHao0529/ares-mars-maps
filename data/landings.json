@@ -1,0 +1,197 @@
+{
+  "features": [
+    {
+      "id": "landing-perseverance",
+      "name": "Perseverance",
+      "point": [
+        18.44463,
+        77.45088
+      ],
+      "year": 2021,
+      "agency": "NASA",
+      "kind": "Landing site",
+      "landing": true,
+      "approximate": false,
+      "diameter_km": 0,
+      "source": "https://ntrs.nasa.gov/citations/20210024644",
+      "description": "NASA \u00b7 2021 landing site, not the current rover position."
+    },
+    {
+      "id": "landing-curiosity",
+      "name": "Curiosity",
+      "point": [
+        -4.5895,
+        137.4417
+      ],
+      "year": 2012,
+      "agency": "NASA",
+      "kind": "Landing site",
+      "landing": true,
+      "approximate": false,
+      "diameter_km": 0,
+      "source": "https://ntrs.nasa.gov/api/citations/20205003707/downloads/Schmerr_et_al_Seismic_signatures_of%20Impact_crater_2019JE006044.pdf",
+      "description": "NASA \u00b7 2012 landing site, not the current rover position."
+    },
+    {
+      "id": "landing-insight",
+      "name": "InSight",
+      "point": [
+        4.502,
+        135.623
+      ],
+      "year": 2018,
+      "agency": "NASA",
+      "kind": "Landing site",
+      "landing": true,
+      "approximate": false,
+      "diameter_km": 0,
+      "source": "https://ntrs.nasa.gov/api/citations/20205003726/downloads/Golombek_Geology_of%20_InSight_landing_site_2020_Nature_communications_s41467-020-14679-1.pdf",
+      "description": "NASA \u00b7 2018 landing site, not the current rover position."
+    },
+    {
+      "id": "landing-phoenix",
+      "name": "Phoenix",
+      "point": [
+        68.22,
+        -125.75
+      ],
+      "year": 2008,
+      "agency": "NASA",
+      "kind": "Landing site",
+      "landing": true,
+      "approximate": false,
+      "diameter_km": 0,
+      "source": "https://science.nasa.gov/mission/mars-phoenix/",
+      "description": "NASA \u00b7 2008 landing site, not the current rover position."
+    },
+    {
+      "id": "landing-spirit",
+      "name": "Spirit",
+      "point": [
+        -14.569,
+        175.473
+      ],
+      "year": 2004,
+      "agency": "NASA",
+      "kind": "Landing site",
+      "landing": true,
+      "approximate": false,
+      "diameter_km": 0,
+      "source": "https://ntrs.nasa.gov/citations/20050169483",
+      "description": "NASA \u00b7 2004 landing site, not the current rover position."
+    },
+    {
+      "id": "landing-opportunity",
+      "name": "Opportunity",
+      "point": [
+        -1.946,
+        -5.527
+      ],
+      "year": 2004,
+      "agency": "NASA",
+      "kind": "Landing site",
+      "landing": true,
+      "approximate": false,
+      "diameter_km": 0,
+      "source": "https://ntrs.nasa.gov/citations/20050169483",
+      "description": "NASA \u00b7 2004 landing site, not the current rover position."
+    },
+    {
+      "id": "landing-pathfinder--sojourner",
+      "name": "Pathfinder / Sojourner",
+      "point": [
+        19.33,
+        -33.55
+      ],
+      "year": 1997,
+      "agency": "NASA",
+      "kind": "Landing site",
+      "landing": true,
+      "approximate": false,
+      "diameter_km": 0,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/mesur.html",
+      "description": "NASA \u00b7 1997 landing site, not the current rover position."
+    },
+    {
+      "id": "landing-viking-1",
+      "name": "Viking 1",
+      "point": [
+        22.27,
+        -47.95
+      ],
+      "year": 1976,
+      "agency": "NASA",
+      "kind": "Landing site",
+      "landing": true,
+      "approximate": false,
+      "diameter_km": 0,
+      "source": "https://science.nasa.gov/mission/viking/",
+      "description": "NASA \u00b7 1976 landing site, not the current rover position."
+    },
+    {
+      "id": "landing-viking-2",
+      "name": "Viking 2",
+      "point": [
+        47.64,
+        134.29
+      ],
+      "year": 1976,
+      "agency": "NASA",
+      "kind": "Landing site",
+      "landing": true,
+      "approximate": false,
+      "diameter_km": 0,
+      "source": "https://science.nasa.gov/mission/viking/",
+      "description": "NASA \u00b7 1976 landing site, not the current rover position."
+    },
+    {
+      "id": "landing-mars-3",
+      "name": "Mars 3",
+      "point": [
+        -45,
+        -158
+      ],
+      "year": 1971,
+      "agency": "Soviet Union",
+      "kind": "Landing area",
+      "landing": true,
+      "approximate": true,
+      "diameter_km": 0,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/mars_mileage_guide.html",
+      "description": "Soviet Union \u00b7 1971 landing area; approximate historic or orbital-image location."
+    },
+    {
+      "id": "landing-beagle-2",
+      "name": "Beagle 2",
+      "point": [
+        11.517,
+        90.437
+      ],
+      "year": 2003,
+      "agency": "ESA / UK",
+      "kind": "Landing area",
+      "landing": true,
+      "approximate": true,
+      "diameter_km": 0,
+      "source": "https://www.uahirise.org/ESP_039308_1915",
+      "description": "ESA / UK \u00b7 2003 landing area; approximate historic or orbital-image location."
+    },
+    {
+      "id": "landing-zhurong",
+      "name": "Zhurong",
+      "point": [
+        25.101,
+        109.915
+      ],
+      "year": 2021,
+      "agency": "China",
+      "kind": "Landing area",
+      "landing": true,
+      "approximate": true,
+      "diameter_km": 0,
+      "source": "https://www.uahirise.org/ESP_069731_2055",
+      "description": "China \u00b7 2021 landing area; approximate historic or orbital-image location."
+    }
+  ],
+  "note": "Twelve historic landing missions. Approximate areas for Mars 3, Beagle 2 and Zhurong; these are not exact vehicle positions. NASA sites use the cited published coordinates, which may have map-frame offsets."
+}
