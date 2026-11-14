@@ -37,3 +37,5 @@ The range model is user-defined, not NASA vehicle capability data. Example full-
 
 The flat map repeats horizontally. Leaflet world wrapping keeps longitudes manageable; solid latitude bounds keep the view on Mars, and the widest zoom locks vertical panning. Overview, terrain and route overlays repeat with the map. Place labels, landing sites and panorama pins appear only while no route endpoint is set. Their layer switches have been removed; each remaining layer has a plain-language description.
 
+Surface photos use CTX imagery for both native tiles and repeated overview fallbacks. The same filter is used on every imagery pane and on the globe; optional Mars colouring is applied after converting surface photos to grayscale. The separate Viking color overview retains its original color. Map and globe clicks choose Start first, then Destination; explicit Start/Destination controls still take priority.
+

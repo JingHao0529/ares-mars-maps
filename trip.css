@@ -13,3 +13,6 @@
 
 #layerPanel{scrollbar-width:thin;scrollbar-color:#d6c5a955 transparent}#layerPanel::-webkit-scrollbar{width:5px}#layerPanel::-webkit-scrollbar-thumb{background:#d6c5a955;border-radius:5px}
 
+/* Use one filter on every surface-imagery pane, including repeated fallback copies. */
+#map .leaflet-tile-pane,#map .leaflet-cached-pane,#map .leaflet-controlled-pane,#map .leaflet-hirise-pane,#map .leaflet-worldOverview-pane{filter:var(--mars-imagery-filter,none)!important}
+
