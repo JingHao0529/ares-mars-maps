@@ -21,3 +21,7 @@ dialog{background:rgba(28,35,39,.94);border-radius:14px;box-shadow:0 15px 60px #
 
 body.illustrative-route .route-metrics,body.illustrative-route .profile-title,body.illustrative-route #profile,body.illustrative-route .compare-choice{display:none}body.illustrative-route #resultMethod{color:#f1d3aa}
 
+.route-heading{display:flex;align-items:center;justify-content:space-between;padding:8px 0 2px;color:#e2e8e3;font-size:12px;font-weight:600}.route-heading button{font-size:15px;color:#c8d0cb;padding:6px 4px 6px 12px}.route-heading+.endpoint-row{border-top:0}
+
+#directions>.section-title{display:none}
+
