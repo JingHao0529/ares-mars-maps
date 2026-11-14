@@ -15,9 +15,9 @@ Serve this folder with any static web server. No build step, account or API key 
 - Outside measured coverage, routing is illustrative. It can compare historical dust activity, but cannot measure slope, elevation or hidden obstacles.
 - Route time uses illustrative transport assumptions and excludes rest stops. One sol is 88,775.244 Earth seconds, following NASA Mars24.
 - Landing markers show historic landing locations, not live rover positions. Approximate sites are marked.
-- Optional warm tint is a display effect on grayscale imagery.
+- Surface photos have an automatic warm display tint.
 
-The environment option scores historical dust-storm centroid counts from selected MDSSD observing periods (7,410 high-confidence observations, Mars years 28–34). Counts are not storm footprints, probabilities or current conditions. A small travel-time penalty represents exposure preference; its weights are app assumptions. Radiation is a dated Gale Crater reference, chemistry is a Phoenix point observation, and the bundled Curiosity weather report is dated 25 August 2026. Unknown coverage is never labelled safe.
+The planner scores historical dust-storm centroid counts from selected MDSSD observing periods (7,410 high-confidence observations, Mars years 28–34). Counts are not storm footprints, probabilities or current conditions. A small travel-time penalty represents exposure preference; its weights are app assumptions. Radiation is a dated Gale Crater reference, chemistry is a Phoenix point observation, and the bundled Curiosity weather report is dated 25 August 2026. Unknown coverage is never labelled safe.
 
 Both endpoints automatically open the 2D route map. Globe layers use bundled NASA mosaics; the mean solar clock uses NASA Mars24 equations at the start longitude.
 
@@ -37,5 +37,7 @@ The range model is user-defined, not NASA vehicle capability data. Example full-
 
 The flat map repeats horizontally. Leaflet world wrapping keeps longitudes manageable; solid latitude bounds keep the view on Mars, and the widest zoom locks vertical panning. Overview, terrain and route overlays repeat with the map. Place labels, landing sites and panorama pins appear only while no route endpoint is set. Their layer switches have been removed; each remaining layer has a plain-language description.
 
-Surface photos use CTX imagery for both native tiles and repeated overview fallbacks. The same filter is used on every imagery pane and on the globe; optional Mars colouring is applied after converting surface photos to grayscale. The separate Viking color overview retains its original color. Map and globe clicks choose Start first, then Destination; explicit Start/Destination controls still take priority.
+Surface photos use CTX imagery for both native tiles and repeated overview fallbacks. The same filter is used on every imagery pane and on the globe; automatic Mars colouring is applied after converting surface photos to grayscale. The separate Viking color overview retains its original color. Map and globe clicks choose Start first, then Destination; explicit Start/Destination controls still take priority.
+
+Layers contains map styles plus steep-ground and historical-dust overlays. Warm Surface photos and environmental routing are always enabled. The measured terrain boundary stays visible and carries its own map label; the extra local ground-height overlay has been removed.
 

@@ -10,7 +10,7 @@
       "title": "NASA Mars Trek · surface, height and infrared maps",
       "url": "https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars",
       "description": "Map layers are available through the OGC RESTful WMTS protocol.",
-      "note": "Surface photos use CTX and HiRISE. The color overview uses Viking images. MOLA shows ground heights. The day and night infrared pictures are old THEMIS mosaics, not today’s temperatures. The globe uses smaller copies of the same global layers. Warm colors are just an optional filter."
+      "note": "Surface photos use CTX and HiRISE. The color overview uses Viking images. MOLA shows ground heights. The day and night infrared pictures are old THEMIS mosaics, not today’s temperatures. The globe uses smaller copies of the same global layers. Surface photos get a warm display tint."
     },
     {
       "title": "Global CTX surface mosaic · NASA / Caltech",
