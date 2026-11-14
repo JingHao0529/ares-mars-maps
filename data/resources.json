@@ -1,0 +1,144 @@
+{
+  "resources": [
+    {
+      "title": "Jezero ground heights · USGS / NASA",
+      "url": "https://stac.astrogeology.usgs.gov/docs/data/mars/ctxdtms/",
+      "description": "DTMs can be used to study the heights and slopes of surface features for a variety of science applications.",
+      "note": "We use heights from stereo spacecraft photos to work out slopes inside the Jezero square. NASA supplied the photos and USGS processed the terrain."
+    },
+    {
+      "title": "NASA Mars Trek · surface, height and infrared maps",
+      "url": "https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars",
+      "description": "Map layers are available through the OGC RESTful WMTS protocol.",
+      "note": "Surface photos use CTX and HiRISE. The color overview uses Viking images. MOLA shows ground heights. The day and night infrared pictures are old THEMIS mosaics, not today’s temperatures. The globe uses smaller copies of the same global layers. Warm colors are just an optional filter."
+    },
+    {
+      "title": "Global CTX surface mosaic · NASA / Caltech",
+      "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer",
+      "description": "CTX",
+      "note": "This fills in the surface outside Jezero, using NASA CTX photos put together by Caltech. Some photos do not line up perfectly."
+    },
+    {
+      "title": "Official place names · IAU / USGS",
+      "url": "https://planetarynames.wr.usgs.gov/Page/MARS/target",
+      "description": "Gazetteer of Planetary Nomenclature",
+      "note": "The search includes 2,055 official named features, as well as landing sites. Mission labels mark where the spacecraft landed, not where a moving rover is now."
+    },
+    {
+      "title": "Perseverance panorama · NASA",
+      "url": "https://science.nasa.gov/resource/mastcam-zs-first-360-degree-panorama/",
+      "description": "This is the first 360-degree panorama taken by Mastcam-Z",
+      "note": "Mars view uses NASA’s actual panorama, taken on 21 February 2021. We show a smaller version so it loads faster. Drag left or right to look around."
+    },
+    {
+      "title": "Curiosity panorama · NASA",
+      "url": "https://science.nasa.gov/resource/curiositys-first-track-marks-on-mars/",
+      "description": "This mosaic from the rover's Navigation camera is made up of 23 full-resolution frames",
+      "note": "This is a real NASA panorama from 22 August 2012, near Curiosity’s landing site. Any gaps belong to the original picture."
+    },
+    {
+      "title": "Historical Mars dust storms · NASA-funded MDSSD",
+      "url": "https://doi.org/10.7910/DVN/0XB6KN",
+      "description": "The information includes the position of dust storm instance at pixel level, timing, storm ID, sequence ID",
+      "note": "We count 7,410 high-confidence storm positions in 4° squares from selected periods in Mars years 28–34. Routes get an extra cost where more sightings were recorded. These are storm centres, not storm boundaries. More orange means more records, not a chance of danger. Missing records do not mean an area is safe. The study used NASA MRO/MARCI images and NASA funding."
+    },
+    {
+      "title": "Curiosity radiation measurements · NASA",
+      "url": "https://www.nasa.gov/news-release/nasa-rover-results-include-first-age-measurement-on-mars-and-help-for-human-exploration/",
+      "description": "an average of 0.67 millisieverts per day from August 2012 to June 2013",
+      "note": "We multiply this old Gale Crater rate by the journey time for a rough reference. We also slightly favour shorter travel times. This cannot predict your route’s radiation, solar storms or how much shielding a vehicle gives."
+    },
+    {
+      "title": "Phoenix soil chemistry · NASA / JPL",
+      "url": "https://www.jpl.nasa.gov/images/pia11156-more-soil-delivered-to-phoenix-lab/",
+      "description": "Preliminary analysis of this soil confirms that it is alkaline",
+      "note": "Phoenix found perchlorate in soil samples in 2008. We flag the sampling location if a route comes within 10 km, just to help spot it. That distance is our display setting, not a measured boundary. We cannot avoid chemicals everywhere because there is no complete chemical hazard map here."
+    },
+    {
+      "title": "Curiosity weather instruments · NASA PDS",
+      "url": "https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/MARS/curiosity/rems.html",
+      "description": "The Rover Environmental Monitoring Station (REMS) is MSL's primary meteorological instrument.",
+      "note": "REMS measures weather and UV at Curiosity. Our nearby report is from NASA’s outreach feed on 25 August 2026: air −71 to −5 °C, UV moderate and no wind value. It is an old local report, not a forecast for the whole planet."
+    },
+    {
+      "title": "Curiosity weather report · NASA outreach feed",
+      "url": "https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json",
+      "description": "",
+      "note": "This is the feed used for the dated weather report. It is for outreach, so we don’t treat it as weather for a real expedition."
+    },
+    {
+      "title": "Mars clock equations · NASA Mars24",
+      "url": "https://www.giss.nasa.gov/tools/mars24/help/algorithm.html",
+      "description": "This is the mean solar time at Mars's prime meridian.",
+      "note": "We use NASA’s equations, then shift the clock to the starting longitude. Without a start, it shows time at 0° east. It is a mean solar clock, not the number of sols since a mission landed."
+    },
+    {
+      "title": "Earth time conversion · IERS",
+      "url": "https://datacenter.iers.org/data/html/bulletinc-072.html",
+      "description": "NO leap second will be introduced at the end of December 2026.",
+      "note": "This helps convert Earth time correctly before using the Mars clock equations."
+    },
+    {
+      "title": "Leaflet · 2D map controls",
+      "url": "https://leafletjs.com/",
+      "description": "Leaflet is designed with simplicity, performance and usability in mind.",
+      "note": "This free library handles the flat map, dragging, markers and zooming."
+    },
+    {
+      "title": "Three.js · globe display",
+      "url": "https://threejs.org/",
+      "description": "JavaScript 3D Library",
+      "note": "This free library draws the globe. The surface pictures still come from the NASA sources above."
+    }
+  ],
+  "landings": [
+    {
+      "name": "Perseverance",
+      "url": "https://ntrs.nasa.gov/citations/20210024644"
+    },
+    {
+      "name": "Curiosity",
+      "url": "https://ntrs.nasa.gov/api/citations/20205003707/downloads/Schmerr_et_al_Seismic_signatures_of%20Impact_crater_2019JE006044.pdf"
+    },
+    {
+      "name": "InSight",
+      "url": "https://ntrs.nasa.gov/api/citations/20205003726/downloads/Golombek_Geology_of%20_InSight_landing_site_2020_Nature_communications_s41467-020-14679-1.pdf"
+    },
+    {
+      "name": "Phoenix",
+      "url": "https://science.nasa.gov/mission/mars-phoenix/"
+    },
+    {
+      "name": "Spirit",
+      "url": "https://ntrs.nasa.gov/citations/20050169483"
+    },
+    {
+      "name": "Opportunity",
+      "url": "https://ntrs.nasa.gov/citations/20050169483"
+    },
+    {
+      "name": "Pathfinder / Sojourner",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/mesur.html"
+    },
+    {
+      "name": "Viking 1",
+      "url": "https://science.nasa.gov/mission/viking/"
+    },
+    {
+      "name": "Viking 2",
+      "url": "https://science.nasa.gov/mission/viking/"
+    },
+    {
+      "name": "Mars 3",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/mars_mileage_guide.html"
+    },
+    {
+      "name": "Beagle 2",
+      "url": "https://www.uahirise.org/ESP_039308_1915"
+    },
+    {
+      "name": "Zhurong",
+      "url": "https://www.uahirise.org/ESP_069731_2055"
+    }
+  ]
+}
